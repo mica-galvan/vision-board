@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Sacramento");
+html {
+  font-size: 14.5px;
+}
+
+body {
+  margin: 0 !important;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.45em;
+  background: url(./assets/bg-board.png), 100vh;
+  width: auto;
+  height: 100vh !important;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* .main-container {
+  margin: 1.6rem 0.8rem;
+} */
+
+.main-container{
+  padding-top: 2.9%;
+}
+
+.grid-container {
+  margin: auto;
+  display: grid;
+  grid-gap: 1.1312rem;
+  grid-template-columns: repeat(auto-fit, 12.8rem);
+  grid-auto-rows: 12.8rem;
+  grid-auto-flow: dense;
+  justify-content: center;
+  max-width: 75em;
+}
+
+.card {
+  grid-row: auto/span 1;
+  grid-column: auto/span 1;
+  background-color: white;
+  box-shadow: 1px 3px 3px rgba(0, 10, 20, 0.06);
+}
+.card h1, .card h2, .card h3, .card h4, .card p {
+  margin-top: 0;
+  font-weight: normal;
+  color: pink;
+}
+.card__image {
+  height: 100%;
+  max-height: 100%;
+  width: 100%;
+  display: flex;
+}
+.card__image img {
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card__side-by-side {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.card__side-by-side--m {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.card__side-by-side--m img {
+  min-height: auto;
+}
+.card__content {
+  padding: 1.6rem;
+}
+.card__button {
+  margin: 1.6rem 0;
+  text-align: center;
+  padding: 0.8rem 1.6rem;
+  background: none;
+  border: 0.5px solid #777;
+  border-radius: 2px;
+}
+.card__button:hover {
+  border-color: #d099a0;
+}
+.card--featured {
+  grid-row: auto/span 3;
+  grid-column: auto/span 2;
+}
+.card--2x {
+  grid-row: auto/span 2;
+  grid-column: auto/span 2;
+}
+.card--vertical {
+  grid-row: auto/span 2;
+}
+.card--horizontal {
+  grid-column: auto/span 2;
+}
+.card--frameless {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.padding-large {
+  padding: 3.2rem;
+}
+.padding-large--l {
+  padding: 1.6rem;
+}
+
+.big-script {
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  font-family: "Sacramento", sans-serif;
+  font-size: 2.3em;
+  line-height: 1.15em;
+  text-align: center;
+}
+.big-script p {
+  margin: 0;
+}
+
+@media (max-width: 413px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+  }
+
+  .card {
+    min-height: 12.8rem;
+  }
+}
+@media (min-width: 627px) {
+  .grid-container {
+    grid-gap: 1.6rem;
+  }
+
+  .card__side-by-side--m {
+    flex-flow: row nowrap;
+  }
+  .card__side-by-side--m img {
+    min-height: 100%;
+  }
+  .card--featured {
+    grid-row: auto/span 2;
+    grid-column: 1/-1;
+  }
+}
+@media (min-width: 836px) {
+  .padding-large--l {
+    padding: 3.2rem;
+  }
+}
+
+/*ajustes pantalla*/
+.card {
+  grid-row: auto/span 1;
+  grid-column: auto/span 1;
+  background-color:aliceblue;
+  box-shadow: 1px 3px 3px rgba(0, 10, 20, 0.06);
+  max-width: 100%; /* Añadir esta línea */
+}
+
+.card__image img {
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  max-width: 100%; /* Añadir esta línea */
+}
+
+/*formas de card*/
+.card--shape-heart {
+  clip-path: polygon(
+    50% 15%, 
+    90% 50%, 
+    70% 90%, 
+    50% 70%,
+    30% 90%, 
+    10% 50% 
+  );
+}
+
+.card--shape-note {
+  clip-path: polygon(
+    0 0, 
+    100% 0, 
+    100% 85%, 
+    50% 100%,
+    0 85% 
+  );
+}
+
+.card--shape-star {
+  clip-path: polygon(
+    50% 0%, 
+    61.8% 35.4%, 
+    100% 38.2%, 
+    69.1% 61.8%, 
+    80.3% 100%,
+    50% 80.3%, 
+    19.7% 100%,
+    30.9% 61.8%, 
+    0% 38.2%, 
+    38.2% 35.4% 
+  );
+}
+
+.card--shape-circle {
+  clip-path: circle(50% at center);
+}
+
+.card--shape-triangle {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+/*columnas*/
+.card--with-columns {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr; /* Define tres columnas: izquierda, imagen/principal, derecha */
+}
+
+.card__side-column {
+  padding: 1rem; /* Ajusta el relleno según sea necesario */
+}
+
+

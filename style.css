@@ -17,10 +17,6 @@ body {
   box-sizing: border-box;
 }
 
-/* .main-container {
-  margin: 1.6rem 0.8rem;
-} */
-
 .main-container{
   padding-top: 2.9%;
 }
@@ -169,7 +165,7 @@ body {
   grid-column: auto/span 1;
   background-color:aliceblue;
   box-shadow: 1px 3px 3px rgba(0, 10, 20, 0.06);
-  max-width: 100%; /* Añadir esta línea */
+  max-width: 100%; 
 }
 
 .card__image img {
@@ -179,20 +175,10 @@ body {
   width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  max-width: 100%; /* Añadir esta línea */
+  max-width: 100%; 
 }
 
 /*formas de card*/
-.card--shape-heart {
-  clip-path: polygon(
-    50% 15%, 
-    90% 50%, 
-    70% 90%, 
-    50% 70%,
-    30% 90%, 
-    10% 50% 
-  );
-}
 
 .card--shape-note {
   clip-path: polygon(
@@ -222,19 +208,3 @@ body {
 .card--shape-circle {
   clip-path: circle(50% at center);
 }
-
-.card--shape-triangle {
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-}
-
-/*columnas*/
-.card--with-columns {
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr; /* Define tres columnas: izquierda, imagen/principal, derecha */
-}
-
-.card__side-column {
-  padding: 1rem; /* Ajusta el relleno según sea necesario */
-}
-
-
